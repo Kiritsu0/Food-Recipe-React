@@ -5,9 +5,6 @@ import RecipeItem from "../../components/recipe-list";
 const Home = () => {
   const { recipeList, loading } = useContext(GlobalContext)
 
-  if (loading) {
-    <div>Loading... Please wait!</div>
-  }
   return (
     <div className="py-8 container mx-auto flex flex-wrap justify-center gap-10">
       {
@@ -15,7 +12,11 @@ const Home = () => {
           recipeList.map(item => <RecipeItem key={item.id} item={item} />)
           :
           <div>
-            <p className="lg:text-4xl text-xl text-center text-black font-extrabold">Nothing to show. Search again</p>
+            <p className="lg:text-4xl text-xl text-center text-black font-extrabold">
+              {
+                loading ? "Loading... Please wait!" : "Nothing to show. Search again"
+              }
+            </p>
           </div>
       }
     </div>

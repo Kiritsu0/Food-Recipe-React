@@ -12,7 +12,7 @@ const Details = () => {
       const data = await response.json();
 
       if (data?.data) {
-        setRecipeDetailsData(data?.data)
+        setRecipeDetailsData(data.data)
       }
     }
 

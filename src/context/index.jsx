@@ -14,6 +14,7 @@ const GLobalState = ({ children }) => {
   const handleSubmit = async (event) => {
     event.preventDefault()
     try {
+      setLoading(true)
       const res = await fetch(`https://forkify-api.herokuapp.com/api/v2/recipes?search=${searchParam}`);
       const data = await res.json();
 
