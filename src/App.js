@@ -8,8 +8,8 @@ import Details from './pages/details';
 function App() {
   return (
     <div>
-      <div className='min-h-screen p-6 bg-white text-gray-600 text-lg'>
-        <Navbar />
+      <Navbar />
+      <div className='min-h-screen bg-white text-gray-600 text-lg pt-36'>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/favorites" element={<Favorites />} />

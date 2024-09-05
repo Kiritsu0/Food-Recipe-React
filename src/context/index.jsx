@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 export const GlobalContext = createContext(null);
 
 const GLobalState = ({ children }) => {
-  const [searchParam, setSearchParam] = useState("");
+  const [searchParam, setSearchParam] = useState("CAKE");
   const [loading, setLoading] = useState(false);
   const [recipeList, setRecipeList] = useState([]);
   const [recipeDetailsData, setRecipeDetailsData] = useState(null);
@@ -12,7 +12,9 @@ const GLobalState = ({ children }) => {
   const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
-    event.preventDefault();
+    if (event) {
+      event.preventDefault();
+    }
     try {
       setLoading(true);
       const res = await fetch(
