@@ -50,7 +50,7 @@ const Details = () => {
           />
         </div>
       ) : (
-        <div className="container mx-auto py-10 grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <div className="flex flex-col md:flex-row gap-5 mx-5 mb-5">
           <div className="row-start-2 lg:row-start-auto">
             <div className="h-96 overflow-hidden rounded-xl group">
               <img
@@ -84,7 +84,7 @@ const Details = () => {
               <span className="text-2xl font-semibold text-black">
                 Ingredients:
               </span>
-              <ul className="flex flex-col gap-3 p-3 h-1/2 overflow-auto">
+              <ul className="flex flex-col gap-3 p-3 max-h-56 list-disc list-inside overflow-auto">
                 {recipeDetailsData?.recipe?.ingredients.map((ingredient) => (
                   <li>
                     <span className="text-2xl font-semibold text-black">
