@@ -14,7 +14,7 @@ const Favorites = () => {
       ) : (
         ""
       )}
-      <div className="flex justify-center">
+      <div className="flex flex-wrap justify-center gap-10">
         {favoritesList && favoritesList.length > 0 ? (
           favoritesList.map((item) => <RecipeItem key={item.id} item={item} />)
         ) : (
