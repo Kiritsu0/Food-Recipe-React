@@ -1,0 +1,2 @@
+https://kiritsu0.github.io/Food-Recipe-React
+https://kiritsu0.github.io/Food-Recipe-React/#/favorites
